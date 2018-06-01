@@ -1,10 +1,13 @@
 function [ fid_nii ] = convert_mri2nii_fid( mri_filename, nii_filename, mri_dim, mri_fid)
 %[ fid_nii ] = convert_mri2nii_fid( mri_filename, nii_filename, mri_dim, mri_fid)
 %   
-%   If no .mri file is available, then sey mri_filename = [] and provide
-%   two additional input variables:
-%   mri_dim (1x3 vector, number of slices in the X,Y,Z dimension)
-%   mri_fid (structure, with fields .pos and .label)
+%   If no CTF .mri file is available, then set mri_filename = [] and 
+%   provide two additional input variables:
+%       mri_dim (1x3 vector, number of slices in the X,Y,Z dimension)
+%       mri_fid (structure, with fields .pos and .label)
+
+% Written by Lorenzo Magazzini (magazzinil@gmail.com)
+% Updated in June 2018
 
 
 %read .mri file and get n slices
