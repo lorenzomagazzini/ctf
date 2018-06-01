@@ -1,6 +1,14 @@
 function [ fid_nii ] = convert_mri2nii_fid( mri_filename, nii_filename, mri_dim, mri_fid)
 %[ fid_nii ] = convert_mri2nii_fid( mri_filename, nii_filename, mri_dim, mri_fid)
 %   
+%   This function uses the FieldTrip toolbox to read a coregistered CTF .mri 
+%   file in which the fiducial locations have already been marked (mri_filename) 
+%   and returns the fiducial voxel coordinates (fid_nii) for the
+%   corresponding MRI NIfTI file (nii_filename).
+%   
+%   The fiducial voxel coordinates of the coregistered CTF .mri file are
+%   extracted using function get_mri_fid.
+%   
 %   If no CTF .mri file is available, then set mri_filename = [] and 
 %   provide two additional input variables:
 %       mri_dim (1x3 vector, number of slices in the X,Y,Z dimension)
