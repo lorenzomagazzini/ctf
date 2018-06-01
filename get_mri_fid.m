@@ -1,5 +1,13 @@
 function [ fid ] = get_mri_fid( mri_filename )
 %[ fid ] = get_mri_fid( mri_filename )
+%   
+%   This function uses the FieldTrip toolbox to read a coregistered CTF .mri 
+%   file in which the fiducial locations have already been marked (mri_filename) 
+%   and returns the fiducial locations in voxel coordinates in a FieldTrip
+%   structure (fid).
+
+% Written by Lorenzo Magazzini (magazzinil@gmail.com)
+% Updated in June 2018
 
 
 %get fieldtrip path
